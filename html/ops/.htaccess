@@ -1,0 +1,6 @@
+
+AuthName "bushman"
+AuthType Basic
+AuthUserFile /home/pette/projects/bushman//html/ops/.htpasswd
+require valid-user
+

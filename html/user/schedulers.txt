@@ -1,0 +1,2 @@
+<!-- <scheduler>http://bushman.home/cgi/cgi</scheduler> -->
+<link rel="boinc_scheduler" href="http://bushman.home/cgi/cgi">

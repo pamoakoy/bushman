@@ -1,0 +1,38 @@
+Steps to complete installation:
+
+-  Change Apache configuration (as root):
+
+   cat /home/pette/projects/bushman/bushman.httpd.conf >> /etc/apache/httpd.conf
+
+   (path to httpd.conf varies; try /etc/httpd/ or /etc/apache2)
+   Then restart the web server:
+
+   /usr/sbin/apache2ctl restart
+   (or /usr/sbin/apachectl restart)
+
+-  Add to crontab (as pette)
+
+    crontab -e
+
+    and add the line:
+
+    0,5,10,15,20,25,30,35,40,45,50,55 * * * * cd /home/pette/projects/bushman ; /home/pette/projects/bushman/bin/start --cron
+
+
+-  Add a .htpasswd file in the project's html/ops directory:
+    (You'll need this to access the project's Administrative page)
+
+    htpasswd -c .htpasswd username
+
+----------------------------
+
+To start, show status, and stop the project, run:
+    bin/start
+    bin/status
+    bin/stop
+
+The project's URLs are:
+Home page (and master URL): http://bushman.home/bushman/
+Administrative page:        http://bushman.home/ops/
+
+
